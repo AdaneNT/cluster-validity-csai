@@ -12,15 +12,6 @@
 ---
 ## Requirements
 
-This package depends on the following main Python libraries:
-
-- `numpy`
-- `pandas`
-- `scikit-learn`
-- `umap-learn`
-- `sentence-transformers`
-- `matplotlib` (optional, for visualization)
-
 You can install all dependencies with:
 
 ```bash
