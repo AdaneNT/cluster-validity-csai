@@ -32,7 +32,7 @@ pip install -r requirements.txt
 Install directly from GitHub:
 
 ```bash
-pip install git+https://github.com/yourusername/cluster-validity-csai.git
+pip install git+https://github.com/AdaneNT/cluster-validity-csai.git
 ```
 
 #### From local source  
