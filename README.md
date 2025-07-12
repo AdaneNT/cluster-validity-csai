@@ -99,7 +99,7 @@ The CSAI method was first introduced in the following publication:
 > ISBN 978-989-758-730-6; ISSN 2184-4313, SciTePress, pages 377–384.  
 > DOI: [10.5220/0013309100003905](https://doi.org/10.5220/0013309100003905)
 
-If you find this code useful in your work, please cite the following publication:
+If you find this code useful in your work, please cite this publication.
 
 ## License
 
