@@ -28,7 +28,7 @@ pip install git+https://github.com/AdaneNT/cluster-validity-csai.git
 Clone the repo and run:
 
 ```bash
-git clone https://github.com/yourusername/cluster-validity-csai.git
+git clone https://github.com/AdaneNT/cluster-validity-csai.git
 cd cluster-validity-csai
 pip install .
 ```
