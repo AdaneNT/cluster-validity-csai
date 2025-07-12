@@ -7,6 +7,12 @@ CSAIEvaluator is a Python library for evaluating the robustness of clustering ac
 ```bash
 pip install git+https://github.com/yourusername/cluster-validity-csai.git
 ```
+### From local source:
+
+Clone the repo and run:
+
+```bash
+pip install .
 
 ## Example
 
