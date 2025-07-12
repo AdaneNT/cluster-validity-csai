@@ -1,12 +1,12 @@
 # CSAIEvaluator: Cluster Structure Alignment Index
 
- **CSAIEvaluator** is a Python package for evaluating the stability of clustering algorithms using cross-validation and distribution alignment. It is especially useful in text and high-dimensional embeddings, using UMAP projections to compare cluster distributions across data splits.
+**CSAIEvaluator** is a Python package for evaluating the stability of clustering algorithms using cross-validation and distribution alignment. It is especially useful in text and high-dimensional embeddings, using UMAP projections to compare cluster distributions across data splits.
 
 ---
 
 ## Features
 
--  Uses UMAP for embedding visualization and dimensionality reduction  
+- Uses UMAP for embedding visualization and dimensionality reduction  
 - Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)  
 - Compares cluster distribution consistency between train/test splits  
 - Easy integration with scikit-learn and SentenceTransformers  
@@ -16,15 +16,20 @@
 
 ## Installation
 
+Install directly from GitHub:
+
 ```bash
 pip install git+https://github.com/yourusername/cluster-validity-csai.git
+```
 
-#### From local source
-
+#### From local source  
 Clone the repo and run:
 
 ```bash
+git clone https://github.com/yourusername/cluster-validity-csai.git
+cd cluster-validity-csai
 pip install .
+```
 
 ---
 
@@ -81,3 +86,10 @@ score = csai.run_csai_evaluation(
 )
 
 print("CSAIEvaluator Score:", score)
+```
+
+---
+
+## License
+
+This software is licensed for academic, non-commercial use only. See the [LICENSE](./LICENSE) file for details.
