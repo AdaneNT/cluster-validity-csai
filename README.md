@@ -10,7 +10,6 @@
 - Compares cluster distribution consistency accross multiple partitions of data
 - Easy integration with scikit-learn and SentenceTransformers  
 ---
-
 ## Requirements
 
 This package depends on the following main Python libraries:
@@ -26,6 +25,7 @@ You can install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Installation
 
