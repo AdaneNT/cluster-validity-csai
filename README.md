@@ -1,4 +1,4 @@
-# CSAIEvaluator: Cluster Structure Alignment Index
+# CSAIEvaluator: Clustering Stability Assessment Index (CSAI)
 
 **CSAIEvaluator** is a Python package for evaluating the stability of clustering algorithms using cross-validation and distribution alignment. It is especially useful in text and high-dimensional embeddings, using UMAP projections to compare cluster distributions across data splits.
 
@@ -8,7 +8,7 @@
 
 - Uses UMAP for embedding visualization and dimensionality reduction  
 - Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)  
-- Compares cluster distribution consistency between train/test splits  
+- Compares cluster distribution consistency between train/test splits for multiple partitions
 - Easy integration with scikit-learn and SentenceTransformers  
 - Designed for unsupervised and semi-supervised clustering analysis  
 
@@ -35,8 +35,6 @@ pip install .
 
 ## Example Usage
 
-This example shows how to use the CSAIEvaluator with SBERT embeddings and UMAP-reduced vectors on the 20 Newsgroups dataset.
-
 ```python
 from csai import CSAIEvaluator
 from sklearn.cluster import KMeans
@@ -51,25 +49,25 @@ import warnings
 
 warnings.filterwarnings("ignore", message="n_jobs value 1 overridden to 1 by setting random_state*", category=UserWarning)
 
-# Step 1: Load and clean 20 Newsgroups text data
+# Step 1: Load and clean data (e.g. 20 Newsgroups dataset)
 newsgroups = fetch_20newsgroups(subset='all')
 df = pd.DataFrame(newsgroups.data, columns=["text"])
 df = df.sample(n=5000, random_state=42).reset_index(drop=True)
 
-# Step 2: Text preprocessing and SBERT embedding
+# Step 2: Text preprocessing and  embedding (e.g.SBERT)
 texts = df["text"].fillna("").apply(lambda x: re.sub(r"\d+|[^\w\s]|\s+", " ", x.lower()).strip()).tolist()
 sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
 embeddings = sbert_model.encode(texts, convert_to_tensor=False)
 df["SBERT_Embedding"] = embeddings.tolist()
 
-# Step 3: UMAP dimensionality reduction
+# Step 3:  Dimensionality reduction (using UMAP)
 reducer = umap.UMAP(n_components=10, random_state=42)
 df["key_umap"] = reducer.fit_transform(np.array(df["SBERT_Embedding"].tolist())).tolist()
 
 # Step 4: Train-test split
 X_train, X_test = train_test_split(df, test_size=0.3, random_state=42)
 
-# Step 5: Define a clustering function
+# Step 5: Define a clustering function (e.g. k-means, but can also applied to other clustering algorithms) 
 def kmeans_label_func(embeddings, n_clusters=6):
     model = KMeans(n_clusters=n_clusters, random_state=42)
     labels = model.fit_predict(embeddings)
