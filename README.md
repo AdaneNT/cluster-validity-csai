@@ -103,7 +103,6 @@ print("CSAIEvaluator Score:", score)
 
 ## Origin
 
-The CSAI method was first introduced in the following publication:
 
 > **"A New Cluster Validation Index Based on Stability Analysis"**  
 > *Proceedings of the International Conference on Pattern Recognition Applications and Methods (ICPRAM)*, Volume 1, pp. 377–384, 2025, Porto, Portugal.  
@@ -112,14 +111,16 @@ Please cite this work if you use CSAIEvaluator in your research.
 
 ---
 
-## 📄 Citation
+## 📄 Citation & Origin
 
-If you find this code useful in your work, please cite:
+The CSAI method was first introduced in the following publication:
+> Tarekegn, A. N., Tessem, B., Rabbi, F. (2025).  
+> **A New Cluster Validation Index Based on Stability Analysis.**  
+> In *Proceedings of the 14th International Conference on Pattern Recognition Applications and Methods - ICPRAM*,  
+> ISBN 978-989-758-730-6; ISSN 2184-4313, SciTePress, pages 377–384.  
+> DOI: [10.5220/0013309100003905](https://doi.org/10.5220/0013309100003905)
 
-> Adane Nega Tarekegn, Bjørnar Tessem, Fazle Rabbi  
-> **"A New Cluster Validation Index Based on Stability Analysis"**  
-> *Proceedings of ICPRAM 2025*, pp. 377–384, Porto, Portugal.  
-> [DOI or publisher link if available]
+If you find this code useful in your work, please cite the following publication:
 
 ## License
 
