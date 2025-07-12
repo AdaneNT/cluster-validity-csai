@@ -1,18 +1,31 @@
 # CSAIEvaluator: Clustering Stability Assessment Index (CSAI)
 
-**CSAIEvaluator** is a Python package for evaluating the stability of clustering algorithms using cross-validation and distribution alignment. It is especially useful in text and high-dimensional embeddings, using UMAP projections to compare cluster distributions across data splits.
+**CSAIEvaluator** is a Python package for evaluating the quality of clustering algorithms using Clustering Stability Assessment Index (CSAI). CSAI is a newly proposed method for assesing both the validity and stability of the clustering solutions. It is based on aggregated feature structure in clusters rather than cluster centroids (traditional). CSAI is a simple, effective, and model agnostic approach to measuring the performance and reproducibility of unsupervised model (clusters).
 
 ---
 
 ## Features
-
-- Uses UMAP for embedding visualization and dimensionality reduction  
-- Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)  
-- Compares cluster distribution consistency between train/test splits for multiple partitions
+- Model-agnostic approach: Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)
+- Uses UMAP for embedding visualization and dimensionality reduction    
+- Compares cluster distribution consistency accross multiple partitions of data
 - Easy integration with scikit-learn and SentenceTransformers  
-- Designed for unsupervised and semi-supervised clustering analysis  
-
 ---
+
+## Requirements
+
+This package depends on the following main Python libraries:
+
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `umap-learn`
+- `sentence-transformers`
+- `matplotlib` (optional, for visualization)
+
+You can install all dependencies with:
+
+```bash
+pip install -r requirements.txt
 
 ## Installation
 
@@ -91,3 +104,8 @@ print("CSAIEvaluator Score:", score)
 ## License
 
 This software is licensed for academic, non-commercial use only. See the [LICENSE](./LICENSE) file for details.
+
+## Acknowledgements
+
+This research work is funded by **SFI MediaFutures Partners** and the **Research Council of Norway**  
+(Grant number: 309339).
