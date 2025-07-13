@@ -4,7 +4,7 @@ setup(
     name='cluster-validity-csai',
     version='0.1.0',
     description='CSAIEvaluator: A Cluster Stability Assesment Index for clustering validation',
-    author='Adane Nega Tarekegn, Bjørnar Tessem, Fazle Rabbi'
+    author='Adane Nega Tarekegn'
     author_email='nega2002@email.com',
     url='https://github.com/adaneNT/cluster-validity-csai',
     packages=find_packages(),
