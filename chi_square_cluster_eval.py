@@ -57,7 +57,7 @@ class ChiSquareClusterEval:
 
 ### Example Usage
 ```python
-features = ['feature1', 'feature4', 'feature3']
+features = ['hyper', 'diabet', 'fatty']
 files = ["Cluster_1.csv", "Cluster_2.csv", "Cluster_3.csv"]
 eval_module = ChiSquareClusterEval(files, features)
 eval_module.load_data()
@@ -65,3 +65,25 @@ report_df = eval_module.compute_statistics()
 eval_module.save_report("Pvalue_detail_Km_chronic_dataset.xlsx")
 print(report_df)
 ```
+
+---
+
+## Complementary Statistical Evaluation
+
+The `ChiSquareClusterEval` module can **absolutely be considered complementary** to `CSAIEvaluator`. While CSAI measures the stability of clustering across partitions based on embedding structure, `ChiSquareClusterEval` provides **statistical significance testing** on categorical variables across clusters using the **Chi-Square test**.
+
+This helps to:
+- Validate if cluster assignments are associated with meaningful feature differences.
+- Quantify confidence in cluster-specific feature distributions.
+
+📂 Source code: [ChiSquareClusterEval Module](https://github.com/AdaneNT/cluster-validity-csai/tree/main/chisquare_eval)
+
+📘 Example output:
+```
+Feature    Chi2    DF    CriticalVal    PValue
+hyper      12.34   2     5.99           0.002
+diabet      8.56   2     5.99           0.013
+fatty      15.67   2     5.99           0.000
+```
+
+This module is particularly useful for **healthcare datasets** or any scenario where **categorical health indicators or labels** are involved.
