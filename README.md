@@ -103,7 +103,7 @@ This helps to:
 
 📘 Example output:
 ```
-Feature    Chi2    DF    CriticalVal    PValue
+**Feature**     **Chi2**    **DF**    **CriticalVal**    **PValue**
 feature1   12.34   2     5.99           0.002
 feature2    8.56   2     5.99           0.013
 feature3   15.67   2     5.99           0.000
