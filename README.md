@@ -95,7 +95,7 @@ print("CSAIEvaluator Score:", score)
 ---
 ## Complementary Statistical Evaluation
 
-The [ChiSquareClusterEval module](https://github.com/AdaneNT/cluster-validity-csai/tree/main/chi_square_test.py) can be considered complementary to `CSAIEvaluator`. The CSAI measures the stability of clustering across partitions based on embedding structure, while `ChiSquareClusterEval module` provides **statistical significance testing** on categorical variables across clusters using the **Chi-Square test**.
+The [Chi-Square Test](https://github.com/AdaneNT/cluster-validity-csai/tree/main/chi_square_test.py) can be considered complementary to `CSAIEvaluator`. The CSAI measures the stability of clustering across partitions based on embedding structure, while `Chi-Square Test` provides **statistical significance testing** on categorical variables across clusters using the **Chi-Square test**.
 
 This helps to:
 - Validate if cluster assignments are associated with meaningful feature differences.
