@@ -57,7 +57,7 @@ class ChiSquareClusterEval:
 
 ### Example Usage
 ```python
-features = ['hyper', 'diabet', 'fatty']
+features = ['feature1', 'feature4', 'feature3']
 files = ["Cluster_1.csv", "Cluster_2.csv", "Cluster_3.csv"]
 eval_module = ChiSquareClusterEval(files, features)
 eval_module.load_data()
