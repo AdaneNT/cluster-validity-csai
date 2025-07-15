@@ -24,6 +24,9 @@ Install directly from GitHub:
 pip install git+https://github.com/AdaneNT/cluster-validity-csai.git
 ```
 
+#### From  PyPI
+pip install cluster-validity-csai
+
 #### From local source  
 Clone the repo and run:
 
