@@ -17,9 +17,9 @@ pip install -r requirements.txt
 ```
 
 ## Installation
-
+```bash
 Install directly from GitHub:
-
+```
 ```bash
 pip install git+https://github.com/AdaneNT/cluster-validity-csai.git
 ```
