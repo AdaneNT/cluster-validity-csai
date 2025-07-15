@@ -109,7 +109,8 @@ Feature    Chi2    DF    CriticalVal    PValue
 hyper      12.34   2     5.99           0.002
 diabet      8.56   2     5.99           0.013
 fatty      15.67   2     5.99           0.000
-## 📄 Citation & Origin
+```
+## Citation & Origin
 
 The CSAI method was first introduced in the following publication:
 > Tarekegn, A. N., Tessem, B., Rabbi, F. (2025).  
