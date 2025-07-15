@@ -17,16 +17,17 @@ pip install -r requirements.txt
 ```
 
 ## Installation
-```bash
+
 Install directly from GitHub:
-```
+
 ```bash
 pip install git+https://github.com/AdaneNT/cluster-validity-csai.git
 ```
 
 #### From  PyPI
+```bash
 pip install cluster-validity-csai
-
+```
 #### From local source  
 Clone the repo and run:
 
