@@ -1,6 +1,6 @@
 ## CSAIEvaluator: Clustering Stability Assessment Index (CSAI)
 
-**CSAIEvaluator** is a Python package for evaluating the quality of clustering algorithms using the Clustering Stability Assessment Index (CSAI) — a novel method for assessing both the validity and stability of clustering solutions. Unlike traditional methods that rely on cluster centroids, CSAI measures the distributional alignment of aggregated feature structures across data partitions. It is a simple, effective, and model-agnostic approach to quantify the performance and reproducibility of unsupervised models.
+**CSAIEvaluator** is a Python package for evaluating the quality of clustering algorithms using the CSAI Index — a novel method for assessing both the validity and stability of clustering solutions. Unlike traditional methods that rely on cluster centroids, CSAI measures the distributional alignment of aggregated feature structures across data partitions. It is a simple, effective, and model-agnostic approach to quantify the performance and reproducibility of unsupervised models.
 
 ---
 
