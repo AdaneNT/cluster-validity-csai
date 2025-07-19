@@ -6,9 +6,9 @@
 
 ## Features
 - Model-agnostic approach: Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)
-- Uses UMAP for embedding visualization and dimensionality reduction    
 - Compares cluster distribution consistency accross multiple partitions of data
--  Easy integration with scikit-learn and SentenceTransformers  
+- Uses UMAP for embedding visualization and dimensionality reduction    
+- Easy integration with scikit-learn and SentenceTransformers  
 ---
 ## Requirements
 
