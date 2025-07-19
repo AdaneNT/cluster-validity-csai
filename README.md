@@ -5,7 +5,7 @@
 ---
 
 ## Features
-- Model-agnostic approach: Supports multiple clustering algorithms (e.g., KMeans, Agglomerative)
+- Model-agnostic approach: Supports multiple clustering algorithms (e.g., KMeans, Agglomerative, Density based clusters)
 - Compares cluster distribution consistency accross multiple partitions of data
 - Uses UMAP for embedding visualization and dimensionality reduction    
 - Easy integration with scikit-learn and SentenceTransformers  
