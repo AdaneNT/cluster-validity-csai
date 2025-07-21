@@ -55,25 +55,25 @@ import warnings
 
 warnings.filterwarnings("ignore", message="n_jobs value 1 overridden to 1 by setting random_state*", category=UserWarning)
 
-# Step 1: Load and clean data (e.g. 20 Newsgroups dataset)
+# Step 1: Load and clean data 
 newsgroups = fetch_20newsgroups(subset='all')
 df = pd.DataFrame(newsgroups.data, columns=["text"])
 df = df.sample(n=5000, random_state=42).reset_index(drop=True)
 
-# Step 2: Text preprocessing and  embedding (e.g.SBERT)
+# Step 2: Text preprocessing and  embedding 
 texts = df["text"].fillna("").apply(lambda x: re.sub(r"\d+|[^\w\s]|\s+", " ", x.lower()).strip()).tolist()
 sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
 embeddings = sbert_model.encode(texts, convert_to_tensor=False)
 df["SBERT_Embedding"] = embeddings.tolist()
 
-# Step 3:  Dimensionality reduction (using UMAP)
+# Step 3:  Dimensionality reduction 
 reducer = umap.UMAP(n_components=10, random_state=42)
 df["key_umap"] = reducer.fit_transform(np.array(df["SBERT_Embedding"].tolist())).tolist()
 
 # Step 4: Train-test split
 X_train, X_test = train_test_split(df, test_size=0.3, random_state=42)
 
-# Step 5: Define a clustering function (e.g. k-means, but can also applied to other clustering algorithms) 
+# Step 5: Define a clustering function
 def kmeans_label_func(embeddings, n_clusters=6):
     model = KMeans(n_clusters=n_clusters, random_state=42)
     labels = model.fit_predict(embeddings)
