@@ -60,7 +60,7 @@ newsgroups = fetch_20newsgroups(subset='all')
 df = pd.DataFrame(newsgroups.data, columns=["text"])
 df = df.sample(n=5000, random_state=42).reset_index(drop=True)
 
-# Step 2: Text preprocessing and  embedding 
+# Step 2: Text preprocessing 
 texts = df["text"].fillna("").apply(lambda x: re.sub(r"\d+|[^\w\s]|\s+", " ", x.lower()).strip()).tolist()
 sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
 embeddings = sbert_model.encode(texts, convert_to_tensor=False)
